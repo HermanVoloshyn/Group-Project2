@@ -1,0 +1,213 @@
+1.  What types of variables we have in Java. Define all of them and explain the
+differences?
+
+There are tree types of variables with respect to their scope
+local variables:
+    if a variable is created inside a block of code like a method, loop, if condition etc. they are
+    called local variables.
+Upside:
+    Local variables occupy the memory for the shortest period of time. You should always try to write code
+    with the help of local variables.
+Downside:
+    They can't be accessed outside the block in which they are created. They have very limited scope.
+instance variables:
+    All the variables which are created inside a class but outside of methods are called instance variables.
+upside:
+    we can use them in all the instance methods of that class. their scope is larger than local variables.
+downside:
+    They stay longer in the memory as compared to local variables.
+static variables:
+    All the variables which are outside of methods and have the static keyword are called static variables.
+upside:
+    static variables only occupy one memory location from the RAM even though we create 1000 objects of that
+    class.
+    They can be used in any block of code inside the class they can be accessed in any methods of a class
+    they can also be accessed with the help of any object of that class. They have the most wide scope
+Downside:
+    They are loaded into the memory when a class is loaded even though you don't use them.
+
+
+
+2.  What is the constructor? Use of a constructor in the class? Difference
+between constructor and a method? Can we overload a constructor?
+
+    Constructor in JAVA is used to create the "Instance" of the class. Constructor are almost similar to Methods, except
+for two things- it's name is the same as the "Class" name, and it has no "Return" type, even "Void".
+If there is no "Constructor" in the class, compiler automatically creates a default "Constructor".
+    There are two types of Constructor:
+Non Argument Constructor
+Parameterized Constructor
+
+In Java, a constructor is a special type of method that is used to initialize objects.
+It is called when an object of a class is created, and it has the same name as the class itself.
+Constructors are used to set initial values for the object's attributes and perform any necessary setup tasks.
+The key differences between a constructor and a method are:
+Name:
+Constructor has the same name as the class.
+Method has its own distinct name.
+    Return Type:
+Constructor has no return type, not even void.
+Method has a return type, which can be void or any other data type.
+    Invocation:
+Constructor is "Implicitly"(Automatically) called when an object is created using the new keyword.
+Method is "Explicitly"(Manually) called using its name.
+Yes, you can overload a constructor.
+Constructor "Overloading" is the process of having multiple constructors in a class with different "Parameter-Lists".
+This allows you to create objects in different ways, providing flexibility to the users of your class.
+
+
+
+3. What is the usage of super and this? Super vs this? Super() vs super.? this()
+vs this.
+
+In Java, super and this are keywords that are used to refer to objects and invoke methods.
+They are often used to differentiate between instance variables and parameters with the same name,
+or to call methods or constructors of the superclass.
+    this Keyword:
+this is a reference variable that refers to the current object.
+It is often used to differentiate instance variables from local variables when they have the same name.
+It is used to invoke the current object's method or "constructor".
+    Super Keyword:
+super is a reference variable used to refer to the "Immediate" parent class object.
+It is often used to differentiate between "Superclass" members and "Subclass" members with the same name.
+It is used to invoke the superclasses method or "constructor
+
+
+
+4.What is Inheritance? Benefits? Types? Explain each type
+
+Inheritance in Java:
+Inheritance is one of the key "Concepts" in Object-Oriented Programming (OOP) that allows a class (subclass or derived class)
+to inherit properties and behaviors from another class (superclass or base class).
+The subclass can reuse and extend the functionality of the superclass, promoting code reuse and organization.
+Benefits of Inheritance:
+    Code Reusability: Inheritance allows you to reuse code from existing classes,
+reducing redundancy and promoting a modular approach to software development.
+    Method Overriding:
+    Subclasses can provide a specific implementation of a method defined in the superclass,
+allowing customization of behavior.
+    Polymorphism:
+    Inheritance enables polymorphism, where a subclass can be treated as an object of its superclass.
+This allows flexibility in code design and facilitates the creation of generic code.
+    Easier Maintenance:
+    Changes made to the superclass are automatically reflected in the subclasses.
+This promotes easier maintenance and updates to the codebase.
+
+Types of Inheritance in Java:
+There are five different types of Inheritance in JAVA.
+    Single Inheritance: In single inheritance, a class can inherit from only one superclass.
+    Multiple Inheritance (through interfaces):
+Java does not support multiple inheritance directly for classes (i.e., a class cannot extend more than one class).
+However, it supports multiple inheritance through interfaces.
+    Multilevel Inheritance:
+In multilevel inheritance, a class is derived from another class, and then another class
+is derived from the intermediate class.
+    Hierarchical Inheritance:
+In hierarchical inheritance, multiple classes inherit from a single superclass.
+    Hybrid Inheritance:
+Hybrid inheritance is a combination of two or more types of inheritance mentioned above.
+
+Java supports single inheritance for classes to avoid ambiguity and complexity associated with multiple inheritance,
+but it compensates by allowing multiple inheritance through interfaces.
+
+
+
+5.What is Overloading? How can it be achieved? What can we overload and
+what we cannot?
+
+    MethodOverloading:
+    Method overloading in Java is a feature that allows a class to have multiple methods with the same name but different parameters.
+    Overloading is based on the number, type, and order of the parameters in the method signature.
+    It provides a way to create more readable and flexible code by using the same method name for different behaviors.
+
+    Achieving Overloading:
+    To achieve method overloading, you need to define multiple methods in the same class with the same name but different parameter lists.
+    The compiler differentiates between the methods based on the number and types of parameters.
+
+Why we should overload a method?
+    1)Method overloading allows us to reuse same method name again and again that we don't have to
+    come up with different method names if we are doing the same thing again and again.
+    2) it allows us to write clean code.
+How to overload a method:
+    We can overload a method by redefining it with different parameters.
+
+
+
+6. What is Overriding? How can it be achieved? What can we override and
+what we cannot?
+Method Overriding:
+    Definition one:
+
+    Method Overriding allows child classes to modify methods which are being inherited from the parents classes.
+    Or declaring a method in subclass which is already present in parent class, so that a child class can give
+    its own implementation.
+
+    Definition two:
+
+    Method overriding is a feature in Java that allows a subclass to provide a specific implementation of a method that
+    is already defined in its superclass. This allows a subclass to customize or extend the behavior of the superclass
+    method.
+    To perform method overriding, the subclass must provide a method with the same signature (name, return type, and
+    parameters) as the one in the superclass.
+
+    Achieving Overriding:
+    Achieving method overriding in Java, should follow these rules:
+
+    The method in the subclass must have the same signature (name, return type, and parameters) as the method in the
+    superclass.
+    The access level of the overriding method in the subclass cannot be more restrictive than the overridden method
+    in the superclass.
+    It can be the same or less restrictive.
+    The overridden method in the superclass must be marked with the @Override annotation (optional but recommended for
+    clarity).
+
+
+
+7.What is Polymorphism? Types of Polymorphism? Differences between
+Overloading & Overriding?
+
+Polymorphism:
+    Polymorphism allows us to perform same action in different ways. There are two types of Polymorphism
+    compile time and time runtime. Polymorphism that is achieved with the help of
+    method overloading is called  early binding or compile time Polymorphism. When we achieve the polymorphism
+    with the help of method overriding it is called run time Polymorphism.
+Why we should learn Polymorphism?
+    Polymorphism allows us to write less code and call multiple methods.
+Polymorphism Syntax:
+    1) for Static Polymorphism we only need to overload a method.
+    2) for the dynamic Polymorphism we need to extend from a class, we need to override the methods from the parent
+    class that we want to use in Polymorphism.
+
+
+
+8.  What is the final keyword,usage and purpose?
+Final keyword:
+    There are three main uses of the final keyword.
+    1) when we use the final keyword with a variable we can't change its value once it is assigned.
+    2) when we have created constants then we declare the variables as final.
+    3) when we use it with a class no other class can inherit from that class.
+
+
+
+9.What is Abstraction? How can we achieve an Abstraction in Java? What is
+Interface? What is Abstract Class? Interface vs Abstract Class?
+
+Abstraction:
+    Abstraction is the process of hiding implementation details and showing only the functionality to user.
+Why we should use Abstraction:
+    1) It reduces the code complexity.
+    2) It allows the end user to focus on using the features instead of worrying about the implementation.
+Syntax:
+    we need to declare the methods as abstract if we are not planning to provide the implementations.
+    we also need to write the abstract keyword with the class as well.
+Abstraction:
+    Allows us to simplify code by hiding implementation details and only showing the functionality to the user.
+    In java, we can achieve this in two ways 1) Abstract classes 2) interface.
+Interface:
+    It is very similar to abstract class. We can have private methods static methods default methods abstract method we can
+    be static in an interface. we can't have instance fields in an interface and because we don't have instance fields we also
+    can't have a constructor in an interface.
+When we should use interface:
+    when objects are closely related to each other and there is a "Is a " relationship between classes then
+    we should go with abstract classes if we want to use abstraction. if Objects are not related to each other then we should
+    implement abstraction with the help of interfaces.
